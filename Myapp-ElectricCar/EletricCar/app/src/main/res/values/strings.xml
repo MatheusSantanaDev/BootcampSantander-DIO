@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Eletric Car</string>
+    <string name="cars">Cars</string>
+    <string name="favorites">Favorites</string>
+    <string name="price">Price</string>
+    <string name="battery">Battery</string>
+    <string name="power">Power</string>
+    <string name="recharge">Recharge</string>
+    <string name="name">Name</string>
+    <string name="kwh_price">Kw/h Price (R$)</string>
+    <string name="km_traveled">Km Traveled (km)</string>
+    <string name="calculate">CALCULATE</string>
+</resources>

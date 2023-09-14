@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cars"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorites"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/tv_cars"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/iv_car"
+        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:src="@drawable/mazda6"
+        app:layout_constraintTop_toBottomOf="@id/tv_cars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        app:layout_constraintTop_toBottomOf="@id/iv_car"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/battery"
+        app:layout_constraintTop_toBottomOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/power"
+        app:layout_constraintTop_toBottomOf="@id/tv_battery"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recharge"
+        app:layout_constraintTop_toBottomOf="@id/tv_power"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_value_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 100"
+        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/iv_car"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:id="@+id/tv_value_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100kW/h"
+        app:layout_constraintLeft_toLeftOf="@id/tv_battery"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_price"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:id="@+id/tv_value_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 cv"
+        app:layout_constraintLeft_toLeftOf="@id/tv_power"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_battery"
+        android:layout_marginStart="80dp" />
+
+    <TextView
+        android:id="@+id/tv_value_recharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 min"
+        app:layout_constraintLeft_toLeftOf="@id/tv_recharge"
+        app:layout_constraintTop_toBottomOf="@id/tv_value_power"
+        android:layout_marginStart="80dp" />
+
+    <EditText
+        android:id="@+id/et_kwh_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/kwh_price"
+        android:maxLength="10"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tv_recharge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/et_km_traveled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/km_traveled"
+        android:maxLength="10"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/et_kwh_price"
+        app:layout_constraintStart_toStartOf="@id/et_kwh_price"
+        app:layout_constraintEnd_toEndOf="@id/et_kwh_price"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/b_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_km_traveled"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
